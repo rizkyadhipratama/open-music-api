@@ -3,11 +3,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable eol-last */
 
-const { handler } = require("@hapi/hapi/lib/cors");
-
-
-// Memuat kode konfigurasi routing server seperti menentukan path, method, dan handler yang digunakan.
-
 const routes = (handler) => [
   {
     method: 'POST',

@@ -1,9 +1,9 @@
 const mapDBToModel = ({
-  albumId,
+  id,
   name,
   year,
 }) => ({
-  albumId,
+  id,
   name,
   year,
 });
