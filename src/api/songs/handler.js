@@ -19,7 +19,7 @@ class SongsHandler {
         title = 'untitled', year, genre, performer, duration, albumId,
       } = request.payload;
 
-      const song = await this._service.addSong({
+      const songId = await this._service.addSong({
         title, year, genre, performer, duration, albumId,
       });
 
@@ -27,7 +27,7 @@ class SongsHandler {
         status: 'success',
         message: 'Lagu berhasil ditambahkan',
         data: {
-          song,
+          songId,
         },
       });
       response.code(201);
@@ -54,11 +54,11 @@ class SongsHandler {
   }
 
   async getSongsHandler() {
-    const song = await this._service.getSongs();
+    const songs = await this._service.getSongs();
     return {
       status: 'success',
       data: {
-        song,
+        songs,
       },
     };
   }
